@@ -7,69 +7,71 @@
         .d-flex.pa-3
           img(src="../assets/my_avatar.jpg").my_avatar
           .first_introduce.d-flex.flex-column.justify-center.pl-4.align-content-space-around
-            label Hello there
-            label I am Hoang Minh Duc
-            label I am a student at Hanoi University of Science and Technology
-            label I like coding and want to be a software developer
+            label.text-h5.font-weight-bold(style="color: grey") Hello there,
+            label.text-h5.font-weight-bold I am Hoang Minh Duc.
+            label.text-h6 I am a student at Hanoi University of Science and Technology.
+            label.text-h6.font-weight-bold I like coding and want to become a software developer.
       .about-me.have-border.v-col-12.mb-2
-        label.font-weight-bold.head-label About me
+        label.font-weight-bold.head-label.pb-4.d-block About me
         .d-flex.align-center
-          label.font-weight-bold Fullname:
+          label.font-weight-bold.pr-2 Fullname:
           span {{personal_infor.fullname}}
         .d-flex.align-center
-          label.font-weight-bold Birthday:
+          label.font-weight-bold.pr-2 Birthday:
           span {{personal_infor.birthday}}
         .d-flex.align-center
-          label.font-weight-bold Sex:
+          label.font-weight-bold.pr-2 Sex:
           span {{personal_infor.sex}}
         .d-flex.align-center
-          label.font-weight-bold Age:
+          label.font-weight-bold.pr-2 Age:
           span {{personal_infor.age}}
         .d-flex.align-center
-          label.font-weight-bold Address:
+          label.font-weight-bold.pr-2 Address:
           span {{personal_infor.address}}
         .d-flex.align-center
-          label.font-weight-bold Phone:
+          label.font-weight-bold.pr-2 Phone:
           span {{personal_infor.phone}}
-        .d-flex.align-center
-          label.font-weight-bold Current job:
+        .d-flex
+          label.font-weight-bold.pr-2 Current job:
           div
             span(v-for="item in personal_infor.current_job" ) {{item}}
+              br
         .d-flex.align-center
-          label.font-weight-bold Major:
+          label.font-weight-bold.pr-2 Major:
           span {{personal_infor.major}}
         .d-flex.align-center
-          label.font-weight-bold MyCV:
-          a(:href="personal_infor.cv_link") CVHoangMinhDuc
-      .d-flex
+          label.font-weight-bold.pr-2 MyCV:
+          a(:href="personal_infor.cv_link" target="_blank") CVHoangMinhDuc
+      .d-flex.justify-space-between
         .my-skills.have-border.v-col-6.mb-2
-          label.font-weight-bold.head-label.head-label My skills
+          label.font-weight-bold.head-label.head-label.pb-4.d-block My skills
           .d-flex.align-center
-            label.font-weight-bold Frontend:
+            label.font-weight-bold.pr-2 Frontend:
             span {{skills.frontend}}
           .d-flex.align-center
-            label.font-weight-bold Backend:
+            label.font-weight-bold.pr-2 Backend:
             span {{skills.backend}}
           .d-flex.align-center
-            label.font-weight-bold Database:
+            label.font-weight-bold.pr-2 Database:
             span {{skills.database}}
           .d-flex.align-center
-            label.font-weight-bold OOP:
+            label.font-weight-bold.pr-2 OOP:
             span {{skills.oop}}
           .d-flex.align-center
-            label.font-weight-bold Source code management:
+            label.font-weight-bold.pr-2 Source code management:
             span {{skills.source_code_management}}
           .d-flex.align-center
-            label.font-weight-bold Devops:
+            label.font-weight-bold.pr-2 Devops:
             span {{skills.devops}}
           .d-flex.align-center
-            label.font-weight-bold English:
+            label.font-weight-bold.pr-2 English:
             span {{skills.english}}
         .interest.have-border.v-col-6.mb-2
-          label.font-weight-bold.head-label My interest
+          label.font-weight-bold.head-label.pb-4.d-block My interest
+          ul.ml-6
+            li(v-for="item in interests") {{item}}
       .my-story.have-border.v-col-12.mb-2
-        label.font-weight-bold.head-label My story
-        br
+        label.font-weight-bold.head-label.pb-4.d-block My story
         label(v-for="item in my_story" ).font-italic {{item}}
           br
 
@@ -86,11 +88,13 @@
       const personal_infor = ref(elements.personal_infor)
       const skills = ref(elements.skills)
       const my_story = ref(elements.my_story)
+      const interests= ref(elements.interests)
       return {
         navList,
         personal_infor,
         skills,
-        my_story
+        my_story,
+        interests
       }
     }
   }
@@ -114,4 +118,6 @@ label
 .head-label
   color: #008631
   font-size: 18px
+ul
+  list-style-type: circle
 </style>

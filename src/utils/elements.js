@@ -32,6 +32,11 @@ const elements = {
     'In my second year of university, I decided to pursue a career as a web programmer. So, I learned basic web programming with HTML, CSS, and JavaScript. At the same time, I studied the ReactJS and NodeJS frameworks to build the backend of the website https://fullstack.edu.vn. I also learned to use other tools such as Git, Github, Docker, and Postman.\n' ,
     'At the end of my second year, I was accepted as a web programming intern at Otani U.P. Here, I learned and improved in many areas, from workflow to professional skills, including VueJS and Python Flask, Bitbucket, Docker, and more.\n' +
     'Currently, I am continuously working to enhance my knowledge and aiming to become a proficient programmer in the future.'
+  ],
+  interests: [
+    'Jogging',
+    'Participate in sports-related volunteer projects',
+    'Watch livestreams and play games',
   ]
 }
 export default elements

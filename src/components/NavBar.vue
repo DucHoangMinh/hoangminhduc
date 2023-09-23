@@ -1,6 +1,6 @@
 <template lang="pug">
 .nav-bar.bg-white.d-flex.mb-4
-  .div(v-for="(item,index) in navList").pa-2.navItem.have-border
+  .div(v-for="(item,index) in navList").px-2.my-2.navItem.have-border
     p {{ item }}
 </template>
 <script>
@@ -20,5 +20,7 @@
 .navItem
   cursor: pointer
 .navItem:hover
-  background-color: #ccc
+
+::v-deep .navItem:first-child
+  border-right: 1px solid #000
 </style>
