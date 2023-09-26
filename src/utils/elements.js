@@ -1,7 +1,7 @@
 const elements = {
   navbar_element: [
-    'Home',
-    'Contact me'
+    {name: 'Home', route: '/'},
+    {name:'Contact me', route: '/contact-me'}
   ],
   personal_infor: {
     fullname: 'Hoàng Minh Đức',

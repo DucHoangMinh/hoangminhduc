@@ -6,6 +6,10 @@ const routes = [
     path: '/',
     component: () => import('@/views/Home.vue'),
   },
+  {
+    path: '/contact-me',
+    component: () => import('@/views/ContactMe.vue')
+  }
 ]
 
 const router = createRouter({
