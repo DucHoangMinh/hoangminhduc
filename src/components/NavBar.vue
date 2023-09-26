@@ -1,7 +1,7 @@
 <template lang="pug">
-.nav-bar.bg-white.d-flex.mb-4
+.nav-bar.bg-white.d-flex.mb-4.px-2
   .div(v-for="(item,index) in navList").px-2.my-2.navItem.have-border
-    router-link(:to="item.route") {{item.name}}
+    router-link(:to="item.route" :class="{'font-weight-bold' : $route.path === item.route}") {{item.name}}
 </template>
 <script>
   import elements from "@/utils/elements";
@@ -43,4 +43,5 @@
   border-right: 2px solid #000
 ::v-deep a
   text-decoration: none
+  color: #000
 </style>
