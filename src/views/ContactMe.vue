@@ -2,7 +2,7 @@
 .container
   v-container
     NavBar
-    .contact-me.pa-2
+    .contact-me.pa-lg-2.pa-4
       .d-flex.text-center.flex-column
         a(href="https://www.facebook.com/duck.hoangminh/" target="_blank").d-flex.align-center
           font-awesome-icon(icon="fa-brands fa-facebook" ).pr-1

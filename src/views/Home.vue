@@ -4,69 +4,66 @@
     NavBar
     .home-body.pa-2
       .introduce.have-border.mb-2.v-col-12
-        .d-flex.pa-3
+        .d-flex.pa-lg-3.introduce-body
           img(src="../assets/my_avatar.jpg").my_avatar
-          .first_introduce.d-flex.flex-column.justify-center.pl-4.align-content-space-around
-            label.text-h5.font-weight-bold(style="color: grey") Hello there,
-            label.text-h5.font-weight-bold I am Hoang Minh Duc.
-            label.text-h6 I am a student at Hanoi University of Science and Technology.
-            label.text-h6.font-weight-bold I like coding and want to become a software developer.
+          .first_introduce.d-flex.flex-column.justify-center.pl-lg-4.align-content-space-around
+            label.text-lg-h5.font-weight-bold(style="color: grey") Hello there,
+            label.text-lg-h5.font-weight-bold I am Hoang Minh Duc.
+            label.text-lg-h6 I am a student at Hanoi University of Science and Technology.
+            label.text-lg-h6.font-weight-bold I like coding and want to become a software developer.
       .about-me.have-border.v-col-12.mb-2
         label.font-weight-bold.head-label.pb-4.d-block About me
         .d-flex.align-center
-          label.font-weight-bold.pr-2 Fullname:
+          label.font-weight-bold.pr-2.v-col-lg-1.v-col-3.text-left.pl-0.py-0 Fullname:
           span {{personal_infor.fullname}}
         .d-flex.align-center
-          label.font-weight-bold.pr-2 Birthday:
+          label.font-weight-bold.pr-2.v-col-lg-1.v-col-3.text-left.pl-0.py-0 Birthday:
           span {{personal_infor.birthday}}
         .d-flex.align-center
-          label.font-weight-bold.pr-2 Sex:
+          label.font-weight-bold.pr-2.v-col-lg-1.v-col-3.text-left.pl-0.py-0 Sex:
           span {{personal_infor.sex}}
         .d-flex.align-center
-          label.font-weight-bold.pr-2 Age:
+          label.font-weight-bold.pr-2.v-col-lg-1.v-col-3.text-left.pl-0.py-0 Age:
           span {{personal_infor.age}}
         .d-flex.align-center
-          label.font-weight-bold.pr-2 Address:
+          label.font-weight-bold.pr-2.v-col-lg-1.v-col-3.text-left.pl-0.py-0 Address:
           span {{personal_infor.address}}
         .d-flex.align-center
-          label.font-weight-bold.pr-2 Phone:
+          label.font-weight-bold.pr-2.v-col-lg-1.v-col-3.text-left.pl-0.py-0 Phone:
           span {{personal_infor.phone}}
-        .d-flex
-          label.font-weight-bold.pr-2 Current job:
+        .d-flex.text-left
+          label.font-weight-bold.pr-2.v-col-lg-1.v-col-3.text-left.pl-0.py-0 Current job:
           div
             span(v-for="item in personal_infor.current_job" ) {{item}}
               br
         .d-flex.align-center
-          label.font-weight-bold.pr-2 Major:
+          label.font-weight-bold.pr-2.v-col-lg-1.v-col-3.text-left.pl-0.py-0 Major:
           span {{personal_infor.major}}
         .d-flex.align-center
-          label.font-weight-bold.pr-2 MyCV:
+          label.font-weight-bold.pr-2.v-col-lg-1.v-col-3.text-left.pl-0.py-0 MyCV:
           a(:href="personal_infor.cv_link" target="_blank") CVHoangMinhDuc
-      .d-flex.justify-space-between
-        .my-skills.have-border.v-col-6.mb-2
+      .d-flex.justify-space-between.flex-column.flex-lg-row
+        .my-skills.have-border.v-col-lg-6.v-col-12.mb-2
           label.font-weight-bold.head-label.head-label.pb-4.d-block My skills
-          .d-flex.align-center
-            label.font-weight-bold.pr-2 Frontend:
+          .d-flex.align-lg-center.align-start
+            label.font-weight-bold.pr-2.v-col-lg-2.v-col-3.text-left.pl-0.py-0 Frontend:
             span {{skills.frontend}}
-          .d-flex.align-center
-            label.font-weight-bold.pr-2 Backend:
+          .d-flex.align-lg-center.align-start
+            label.font-weight-bold.pr-2.v-col-lg-2.v-col-3.text-left.pl-0.py-0 Backend:
             span {{skills.backend}}
-          .d-flex.align-center
-            label.font-weight-bold.pr-2 Database:
+          .d-flex.align-lg-center.align-start
+            label.font-weight-bold.pr-2.v-col-lg-2.v-col-3.text-left.pl-0.py-0 Database:
             span {{skills.database}}
-          .d-flex.align-center
-            label.font-weight-bold.pr-2 OOP:
+          .d-flex.align-lg-center.align-start
+            label.font-weight-bold.pr-2.v-col-lg-2.v-col-3.text-left.pl-0.py-0 OOP:
             span {{skills.oop}}
-          .d-flex.align-center
-            label.font-weight-bold.pr-2 Source code management:
-            span {{skills.source_code_management}}
-          .d-flex.align-center
-            label.font-weight-bold.pr-2 Devops:
-            span {{skills.devops}}
-          .d-flex.align-center
-            label.font-weight-bold.pr-2 English:
+          .d-flex.align-lg-center.align-start
+            label.font-weight-bold.pr-2.v-col-lg-2.v-col-3.text-left.pl-0.py-0 Others:
+            span {{skills.others}},
+          .d-flex.align-lg-center.align-start
+            label.font-weight-bold.pr-2.v-col-lg-2.v-col-3.text-left.pl-0.py-0 English:
             span {{skills.english}}
-        .interest.have-border.v-col-6.mb-2
+        .interest.have-border.v-col-lg-6.v-col-12.mb-2
           label.font-weight-bold.head-label.pb-4.d-block My interest
           ul.ml-6
             li(v-for="item in interests") {{item}}
@@ -112,6 +109,7 @@
 .my_avatar
   width: 144px
   border: 1px solid #000
+  object-fit: contain
 label
   font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell',"Fira Sans","Droid Sans","Helvetica Neue",sans-serif
   -webkit-font-smoothing: antialiased
@@ -120,4 +118,8 @@ label
   font-size: 18px
 ul
   list-style-type: circle
+//Responsive
+@media only screen and (max-width: 768px)
+  .introduce-body
+    flex-direction: column
 </style>
